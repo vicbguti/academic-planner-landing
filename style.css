@@ -371,6 +371,80 @@ footer {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Demos & TikTok Grid */
+.demos {
+    padding: 6rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tiktok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tiktok-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tiktok-card:hover {
+    transform: translateY(-5px);
+}
+
+.tiktok-card h4 {
+    margin: 1rem 0 0.5rem;
+    color: var(--primary);
+}
+
+.tiktok-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Testimonials */
+.community {
+    padding: 6rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.testimonial-card .user {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
 /* Badge for Hero */
 .badge {
     display: inline-block;
@@ -384,7 +458,14 @@ footer {
     border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-/* Responsive Research */
+.testimonial-card .user {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
+/* Responsive Research Update */
 @media (max-width: 1024px) {
     .grid-2 {
         grid-template-columns: 1fr;
@@ -397,5 +478,10 @@ footer {
 
     .research-links {
         align-items: center;
+    }
+
+    .tiktok-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 }
